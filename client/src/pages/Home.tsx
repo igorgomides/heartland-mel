@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isLanded, setIsLanded] = useState(false);
   const [language, setLanguage] = useState<"en" | "pt">(() => {
     const saved = localStorage.getItem("language");
     return (saved === "en" || saved === "pt") ? saved : "pt";
@@ -130,15 +131,16 @@ export default function Home() {
                     scale: [0.2, 0.6, 0.9, 1],
                   }}
                   transition={{
-                    duration: 4,
+                    duration: 5,
                     ease: "easeInOut",
                     times: [0, 0.4, 0.7, 1],
                     delay: 0.1
                   }}
+                  onAnimationComplete={() => setIsLanded(true)}
                   style={{ top: "15%", left: "25%" }}
                 >
                   <img
-                    src="/images/afteraffects/beewingsmoving.aep_AME/bee-wingless.gif"
+                    src={isLanded ? "/images/just-bee-hero.png" : "/images/afteraffects/beewingsmoving.aep_AME/bee-wingless.gif"}
                     alt="Flying Bee"
                     className="w-full h-full object-contain"
                   />
