@@ -191,8 +191,17 @@ export default function Home() {
       </section>
 
       {/* Story Section */}
-      <section id="story" className="py-16 md:py-24 bg-stone-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section
+        id="story"
+        className="py-16 md:py-24 bg-stone-50 relative"
+        style={{
+          backgroundImage: "url('/images/hive background ai.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-white/80"></div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Story Image */}
             <div className="order-2 md:order-1">
@@ -287,8 +296,17 @@ export default function Home() {
       </section >
 
       {/* Products Section */}
-      < section id="products" className="py-16 md:py-24 bg-stone-50" >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section
+        id="products"
+        className="py-16 md:py-24 bg-stone-50 relative"
+        style={{
+          backgroundImage: "url('/images/hive background ai.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-white/80"></div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-amber-700 display-font mb-4">
               {t.products.title}
