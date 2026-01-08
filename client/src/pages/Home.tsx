@@ -8,7 +8,7 @@ export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [language, setLanguage] = useState<"en" | "pt">(() => {
     const saved = localStorage.getItem("language");
-    return (saved === "en" || saved === "pt") ? saved : "en";
+    return (saved === "en" || saved === "pt") ? saved : "pt";
   });
 
   const t = translations[language];
