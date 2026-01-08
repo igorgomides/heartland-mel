@@ -9,7 +9,7 @@ export default function Home() {
   const [isLanded, setIsLanded] = useState(false);
   const [language, setLanguage] = useState<"en" | "pt">(() => {
     const saved = localStorage.getItem("language");
-    return (saved === "en" || saved === "pt") ? saved : "pt";
+    return saved === "en" ? "en" : "pt";
   });
 
   const t = translations[language];
@@ -53,20 +53,6 @@ export default function Home() {
   }, [isLanded]);
 
   useEffect(() => {
-    // Check IP location if no language is manually saved
-    if (!localStorage.getItem("language")) {
-      fetch("https://ipapi.co/json/")
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.country_code === "BR") {
-            setLanguage("pt");
-            // Optionally stick to it so we don't fetch every time, or leave it valid for session
-            // For now, let's just set the state. If user toggles, it saves to localStorage.
-          }
-        })
-        .catch((err) => console.error("Failed to detect location:", err));
-    }
-
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
