@@ -8,6 +8,7 @@ export const translations = {
         },
         hero: {
             title: "HEARTLAND",
+            subtitle: "",
             titlePart1: "HONEY FROM THE",
             titlePart2: "HEART.",
             description: "Discover the golden essence of authentic beekeeping. Heartland Mel brings you pure, ethically-sourced honey that honors traditional methods and celebrates the connection between bees, flowers, and the land.",
