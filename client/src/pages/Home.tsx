@@ -22,6 +22,36 @@ export default function Home() {
     });
   };
 
+  const [isWingsMoving, setIsWingsMoving] = useState(true);
+
+  useEffect(() => {
+    if (!isLanded) return;
+
+    // Immediately stop wings upon landing
+    setIsWingsMoving(false);
+
+    let timeoutId: NodeJS.Timeout;
+
+    const loop = () => {
+      setIsWingsMoving((moving) => {
+        if (moving) {
+          // If moving, stop after 1.5s (short flap)
+          timeoutId = setTimeout(loop, 1000);
+          return false;
+        } else {
+          // If stopped, start moving after 4s (long pause)
+          timeoutId = setTimeout(loop, 3000);
+          return true;
+        }
+      });
+    };
+
+    // Initial pause before first flap
+    timeoutId = setTimeout(loop, 3000);
+
+    return () => clearTimeout(timeoutId);
+  }, [isLanded]);
+
   useEffect(() => {
     // Check IP location if no language is manually saved
     if (!localStorage.getItem("language")) {
@@ -122,13 +152,13 @@ export default function Home() {
                 />
                 {/* Bee Container - Handles Flight Path */}
                 <motion.div
-                  className="absolute z-40 w-32 pointer-events-none"
+                  className="absolute z-40 w-56 pointer-events-none"
                   initial={{ x: -1000, y: -400, opacity: 0, scale: 0.2 }}
                   animate={{
-                    x: [-1000, -600, -300, 10],
-                    y: [-400, 50, -50, 40],
+                    x: [-1000, -600, -300, -38],
+                    y: [-400, 50, -50, -29],
                     opacity: [0, 1, 1, 1],
-                    scale: [0.2, 0.6, 0.9, 1],
+                    scale: [0.2, 0.6, 0.9, 1.2],
                   }}
                   transition={{
                     duration: 5,
@@ -140,7 +170,7 @@ export default function Home() {
                   style={{ top: "15%", left: "25%" }}
                 >
                   <img
-                    src={isLanded ? "/images/just-bee-hero.png" : "/images/afteraffects/beewingsmoving.aep_AME/bee-wingless.gif"}
+                    src={isWingsMoving ? "/images/afteraffects/beewingsmoving.aep_AME/bee-wingless.gif" : "/images/afteraffects/beewingsmoving.aep_AME/bee-wingless00.png"}
                     alt="Flying Bee"
                     className="w-full h-full object-contain"
                   />
