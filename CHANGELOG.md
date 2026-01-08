@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [1.0.1] - 2026-01-08 20:13
 
 ### Added
 -   **Backgrounds**: Added `hive background ai.png` to the **"Our Story"** (`#story`) and **"Products"** (`#products`) sections.
