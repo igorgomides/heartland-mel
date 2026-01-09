@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.6] - 2026-01-08 22:51
+
+### Fixed
+-   **Navigation**: Fixed the "Discover Our Story" and "Shop Now" hero buttons not scrolling to their respective sections by wrapping them in anchor tags.
 ## [1.0.5] - 2026-01-08 22:47
 
 ### Added

@@ -114,17 +114,21 @@ export default function Home() {
                 {t.hero.description}
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <Button
-                  className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-6 rounded-full font-medium text-lg transition-all hover:scale-105"
-                >
-                  {t.hero.discover}
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="text-gray-900 hover:text-amber-600 px-8 py-6 rounded-full font-medium text-lg hover:bg-amber-50"
-                >
-                  {t.hero.shop}
-                </Button>
+                <a href="#story">
+                  <Button
+                    className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-6 rounded-full font-medium text-lg transition-all hover:scale-105"
+                  >
+                    {t.hero.discover}
+                  </Button>
+                </a>
+                <a href="#products">
+                  <Button
+                    variant="ghost"
+                    className="text-gray-900 hover:text-amber-600 px-8 py-6 rounded-full font-medium text-lg hover:bg-amber-50"
+                  >
+                    {t.hero.shop}
+                  </Button>
+                </a>
               </div>
             </div>
 
