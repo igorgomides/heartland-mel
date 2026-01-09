@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.5] - 2026-01-08 22:47
+
+### Added
+-   **Favicon**: Added generic favicon (`favicon.png`) to `index.html`.
 ## [1.0.4] - 2026-01-08 22:40
 
 ### Fixed
