@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 2026-01-08 21:57
+
+### Added
+-   **Mobile Animation**: Enabled the bee animation and melting heart background on mobile devices.
+    -   Implemented a dedicated mobile-specific container (`lg:hidden`) to ensure zero impact on desktop layout.
+    -   Added `just-melting--heart-hero.png` to the mobile view.
+    -   Adjusted flight path coordinates and scaling for smaller screens.
+
 ## [1.0.1] - 2026-01-08 20:13
 
 ### Added
