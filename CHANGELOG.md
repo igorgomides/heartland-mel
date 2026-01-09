@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2026-01-08 22:04
+
+### Changed
+-   **Mobile Animation**: Refined the flight path of the bee and adjusted the position/size of the melting heart on mobile devices for better visual alignment.
+
 ## [1.0.2] - 2026-01-08 21:57
 
 ### Added
