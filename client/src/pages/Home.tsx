@@ -105,7 +105,7 @@ export default function Home() {
                 <p className="text-amber-600 font-medium tracking-widest uppercase text-sm">
                   {t.hero.subtitle}
                 </p>
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 tracking-tight leading-tight display-font">
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-800 tracking-tight leading-tight display-font">
                   {t.hero.titlePart1} <br />
                   <span className="text-amber-600">{t.hero.titlePart2}</span>
                 </h1>
@@ -169,14 +169,14 @@ export default function Home() {
               <img
                 src="/images/just-melting--heart-hero.png"
                 alt="Heartland Mel Hero"
-                className="absolute -top-[-70px] -right-10 w-[90%] max-w-none opacity-90 object-contain rotate-2"
+                className="absolute -top-[-100px] -right-10 w-[80%] max-w-none opacity-90 object-contain rotate-2"
               />
               <motion.div
                 className="absolute w-32"
                 initial={{ x: 0, y: -0, opacity: 0 }}
                 animate={{
-                  x: [-300, -150, -10, -80], // Adjusted coordinates for mobile screen width
-                  y: [-200, 50, 150, -10],
+                  x: [-300, -150, -10, -70], // Adjusted coordinates for mobile screen width
+                  y: [-200, 50, 150, 10],
                   opacity: [0.5, 1, 1, 1],
                   scale: [0.5, 0.8, 1, 1],
                 }}

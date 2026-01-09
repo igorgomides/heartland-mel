@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.4] - 2026-01-08 22:40
+
+### Fixed
+-   **TypeScript**: Resolved "Cannot find name 'span'" error in `Home.tsx` by updating `tsconfig.json` to use `"jsx": "react-jsx"`.
+
+### Changed
+-   **Desktop UI**: Increased the size of the 3D heart hero element on desktop for better visibility.
+-   **Mobile UI**: Fine-tuned the bee animation flight path and melting heart image size/positioning on mobile screens.
 ## [1.0.3] - 2026-01-08 22:04
 
 ### Changed
