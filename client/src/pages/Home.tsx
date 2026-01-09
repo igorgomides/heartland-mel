@@ -163,6 +163,38 @@ export default function Home() {
                 </motion.div>
               </div>
             </div>
+
+            {/* Mobile Bee - Hidden on Desktop, Visible on Mobile */}
+            <div className="absolute inset-0 pointer-events-none lg:hidden overflow-hidden z-20">
+              <img
+                src="/images/just-melting--heart-hero.png"
+                alt="Heartland Mel Hero"
+                className="absolute -top-[-70px] -right-10 w-[90%] max-w-none opacity-90 object-contain rotate-2"
+              />
+              <motion.div
+                className="absolute w-32"
+                initial={{ x: 0, y: -0, opacity: 0 }}
+                animate={{
+                  x: [-300, -150, -10, -80], // Adjusted coordinates for mobile screen width
+                  y: [-200, 50, 150, -10],
+                  opacity: [0.5, 1, 1, 1],
+                  scale: [0.5, 0.8, 1, 1],
+                }}
+                transition={{
+                  duration: 4,
+                  ease: "easeInOut",
+                  times: [0, 0.3, 0.7, 1],
+                }}
+                onAnimationComplete={() => setIsLanded(true)}
+                style={{ top: "10%", right: "10%" }} // Positioned relative to container
+              >
+                <img
+                  src={isWingsMoving ? "/images/afteraffects/beewingsmoving.aep_AME/bee-wingless.gif" : "/images/afteraffects/beewingsmoving.aep_AME/bee-wingless00.png"}
+                  alt="Flying Bee"
+                  className="w-full h-full object-contain filter drop-shadow-xl"
+                />
+              </motion.div>
+            </div>
           </div>
         </div>
 
