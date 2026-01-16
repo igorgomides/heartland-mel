@@ -17,7 +17,7 @@ export const getLoginUrl = () => {
 };
 
 export const WHATSAPP_NUMBER = "5562992668951"; // TODO: UPDATE THIS WITH REAL NUMBER
-export const WHATSAPP_MESSAGE = "Olá! Vi o Mel do Coração no site e quero garantir o meu. Vocês podem me ajudar?";
+export const WHATSAPP_MESSAGE = "Olá! Vi o Mel do Coração no site e quero garantir o meu. \n\nVocês podem me ajudar?";
 
 export const getWhatsAppUrl = () => {
   const encodedMessage = encodeURIComponent(WHATSAPP_MESSAGE);
