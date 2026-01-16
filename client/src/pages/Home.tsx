@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { getWhatsAppUrl } from "@/const";
 import { translations } from "@/lib/translations";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowUp, Globe, Heart, Hexagon, Leaf } from "lucide-react";
@@ -121,7 +122,7 @@ export default function Home() {
                     {t.hero.discover}
                   </Button>
                 </a>
-                <a href="#products">
+                <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="ghost"
                     className="text-gray-900 hover:text-amber-600 px-8 py-6 rounded-full font-medium text-lg hover:bg-amber-50"
@@ -362,12 +363,14 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Button
-                className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold"
-                size="lg"
-              >
-                {t.products.showcase.shop}
-              </Button>
+              <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
+                <Button
+                  className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold"
+                  size="lg"
+                >
+                  {t.products.showcase.shop}
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -380,12 +383,14 @@ export default function Home() {
             {t.cta.title}
           </h2>
           <p className="text-xl text-amber-50">{t.cta.desc}</p>
-          <Button
-            className="bg-white text-amber-700 hover:bg-amber-50 px-10 py-4 rounded-lg font-bold text-lg"
-            size="lg"
-          >
-            {t.cta.button}
-          </Button>
+          <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
+            <Button
+              className="bg-white text-amber-700 hover:bg-amber-50 px-10 py-4 rounded-lg font-bold text-lg"
+              size="lg"
+            >
+              {t.cta.button}
+            </Button>
+          </a>
         </div>
       </section >
 
