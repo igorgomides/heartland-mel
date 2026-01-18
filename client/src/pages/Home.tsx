@@ -431,8 +431,8 @@ export default function Home() {
                 {t.footer.contact}
               </h4>
               <ul className="space-y-2 text-sm">
-                <li>Email: hello@heartlandmel.com</li>
-                <li>Phone: (555) 123-4567</li>
+                <li>Email: info@omeldocoracao.com.br</li>
+                <li>Phone: (62)99266-8951</li>
               </ul>
             </div>
             <div>
